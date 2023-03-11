@@ -71,9 +71,11 @@ public class Game {
                 + ", usersRated=" + usersRated + ", url=" + url + ", image=" + image + "]";
     }
 
-
+    // Method takes a Document object as input and returns a Game object
     public static Game create(Document d) {
+        // Create a new instance of Game
         Game g = new Game();
+        // Set the gid of the Game object to the integer value of the "gid" field in the Document
         g.setGid(d.getInteger("gid"));
         g.setName(d.getString("name"));
         g.setYear(d.getInteger("year"));
@@ -81,7 +83,7 @@ public class Game {
         g.setUsersRated(d.getInteger("users_rated"));
         g.setUrl(d.getString("url"));
         g.setImage(d.getString("image"));
-
+        // Return the Game object
         return g;
     }
 
